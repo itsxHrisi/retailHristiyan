@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}Contactes{% endblock %}
+{% block body %}
+<h1>Llistat de contactes</h1>
+{% if contactes %}
+{% for contacte in contactes %}
+<ul>
+<li><strong>{{ contacte.nom }}</strong></li>
+<li><strong>Telèfon</strong>: {{ contacte.telefon }}</li>
+<li><strong>E-mail</strong>: {{ contacte.email }}</li>
+</ul>
+{% endfor %}
+{% else %}
+<p>No s'han trobat contactes</p>
+{% endif %}
+{% endblock %}
