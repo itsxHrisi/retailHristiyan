@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+{{ encore_entry_link_tags('app') }}
+<link href="{{ asset('css/estilsSeccio.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+
+<h1 id="titolSeccio">Bienvenido a la pagina de dades seccio</h2>
+<img src="{{ asset('assets/img/bob.png') }}"class="imatgeSeccio">
+<p id="paragrafSeccio">Parragraf pagina de seccio<p>
+
+{% endblock %}

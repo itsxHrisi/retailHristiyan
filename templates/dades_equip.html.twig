@@ -1,0 +1,24 @@
+{% block title %}Detalles del Equipo{% endblock %}
+
+{% block body %}
+    <a href ="{{ path('inici') }}">
+        <img src="{{ asset('var/www/html/symfony/retailHristiyan/public/assets/img/favicon.png') }}" alt="Imagen del equipo" class="imatgeEquip">
+    </a>
+
+    <h1>Detalles del Equipo</h1>
+    
+    {% if equipo %}
+        <ul>
+            <li><strong>Nombre:</strong> {{ equipo.nombre }}</li>
+            <li><strong>Ciudad:</strong> {{ equipo.ciudad }}</li>
+            <li><strong>Fundado en:</strong> {{ equipo.fundado }}</li>
+            <li>
+                <img src="{{ asset('/assets/img/bob.png') }}" alt="Imagen del equipo" class="imatgeEquip">
+            </li>
+        
+            
+        </ul>
+    {% else %}
+        <p>{{ error }}</p>
+    {% endif %}
+{% endblock %}
