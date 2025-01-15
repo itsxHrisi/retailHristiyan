@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-direction: column; 
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; 
+    margin: 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+    
+  }
+  #bp{
+    padding-left: 10px;
+    background-color: orange;
+    border: 1px solid black;
+    margin: 5px;
+    color: white;
+  }
+  
+  .imatgeEquip {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /
+  }
+  
+  #imgHome {
+    width: 50px; 
+    height: auto;
+    margin-bottom: 20px;
+  }
+  div{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    flex-direction: column; 
+    background-color: lightgrey;
+  }

@@ -1,17 +1,20 @@
 {% block title %}Detalles del Equipo{% endblock %}
-
+{% block stylesheets %}
+{{ encore_entry_link_tags('app') }}
+<link href="{{ asset('css/estilsEquips.css') }}" rel="stylesheet" />
+{% endblock %}
 {% block body %}
     <a href ="{{ path('inici') }}">
-        <img src="{{ asset('var/www/html/symfony/retailHristiyan/public/assets/img/favicon.png') }}" alt="Imagen del equipo" class="imatgeEquip">
+        <img id="imgHome" src="{{ asset('/assets/img/favicon.png') }}" alt="Imagen per anar al inici" class="imatgeEquip">
     </a>
-
+    <div>
     <h1>Detalles del Equipo</h1>
     
     {% if equipo %}
         <ul>
-            <li><strong>Nombre:</strong> {{ equipo.nombre }}</li>
-            <li><strong>Ciudad:</strong> {{ equipo.ciudad }}</li>
-            <li><strong>Fundado en:</strong> {{ equipo.fundado }}</li>
+            <li id="bp"><strong>Nombre:</strong> {{ equipo.nombre }}</li>
+            <li id="bp"><strong>Ciudad:</strong> {{ equipo.ciudad }}</li>
+            <li id="bp"><strong>Fundado en:</strong> {{ equipo.fundado }}</li>
             <li>
                 <img src="{{ asset('/assets/img/bob.png') }}" alt="Imagen del equipo" class="imatgeEquip">
             </li>
@@ -21,4 +24,5 @@
     {% else %}
         <p>{{ error }}</p>
     {% endif %}
+    </div>
 {% endblock %}
