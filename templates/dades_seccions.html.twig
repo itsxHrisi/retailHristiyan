@@ -1,22 +1,10 @@
+{# templates/dades_seccio.html.twig #}
 {% extends 'base.html.twig' %}
-
+{% block title %}Seccions{% endblock %}
 {% block stylesheets %}
-{{ encore_entry_link_tags('app') }}
-<link href="{{ asset('css/estilsInici.css') }}" rel="stylesheet" />
+<link href="{{ asset('css/estilsSeccio.css') }}" rel="stylesheet" />
 {% endblock %}
-
 {% block body %}
-<div>
-<h2 id="titolInici">Bienvenido a la pagina de hristiyan</h2>
-
-<!-- Enlace a la página de detalles -->
-<a href="/seccio/1">
-    <img src="{{ asset('assets/img/bob.png') }}" class="imatgeInici">
-</a>
-
-<p id="paragrafInici">Parragraf pagina de inici<p>
-</div>
-<div>
 
 <h1 id="titolsesccio">Dades Seccio:</h1>
 
@@ -30,5 +18,5 @@
         </div>
     {% endfor %}
 </div>
-</div>
+
 {% endblock %}

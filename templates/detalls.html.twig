@@ -1,0 +1,25 @@
+{# templates/detalls.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}Detall Seccio{% endblock %}
+{% block stylesheets %}
+<link href="{{ asset('css/estilsDetall.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+
+<div class="container">
+    <h1 id="titolseccioarticle">{{seccio.nom}}</h1>
+    <h3 id="descripcioarticle">{{seccio.descripcio}}</h3>
+    <img class="imatgearticle" src="{{ asset(seccio.imatge) }}" />
+
+    <div class="contentarticles">
+        {% for article in seccio.articles %}
+            <p id="article">{{ article }}</p>
+        {% endfor %}
+    </div>
+
+    <a class="botoarticle" href="{{ path('inici') }}">
+        Tornar a inici
+    </a>
+</div>
+
+{% endblock %}
